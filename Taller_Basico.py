@@ -318,3 +318,164 @@ elif(opcion == 23):
     print(f"Lista sin duplicados: {sin_duplicados}")
 
 
+elif(opcion == 24):
+        # Lista vacía para guardar notas
+    calificaciones = []  
+
+        # Ingresar notas
+    for i in range(5):
+        nota = float(input(f"Ingrese la nota {i+1}: "))
+        calificaciones.append(nota)
+
+            # Calcular el promedio
+    promedio = sum(calificaciones) / len(calificaciones)
+
+            # Mostrar resultados
+    print("\nNotas ingresadas:", calificaciones)
+    print(f"Promedio general: {promedio:.2f}")
+
+            # Evaluar el resultado
+    if promedio >= 3.0:
+                print(" Aprobado")
+    else:
+                print(" Reprobado")
+
+
+elif(opcion == 25):
+
+    carrito = []
+    precios = []
+
+    while True:
+        producto = input("Ingrese el producto (o 'salir' para terminar): ")
+        if producto.lower() == "salir":
+            break
+        precio = float(input("Ingrese el precio: "))
+        carrito.append(producto)
+        precios.append(precio)
+
+    print("\n Productos en el carrito:")
+    for i in range(len(carrito)):
+        print(f"{carrito[i]} - ${precios[i]}")
+        print(f"\nTotal a pagar: ${sum(precios):.2f}")
+
+
+elif(opcion == 26) :  
+
+    
+    saldo = 1000.0
+
+    while True:
+        print("\n1. Consultar saldo\n2. Depositar\n3. Retirar\n4. Salir")
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            print(f"Tu saldo actual es: ${saldo:.2f}")
+        elif opcion == "2":
+            deposito = float(input("Cantidad a depositar: "))
+            saldo += deposito
+        elif opcion == "3":
+            retiro = float(input("Cantidad a retirar: "))
+            if retiro <= saldo:
+                saldo -= retiro
+            else:
+                print("Fondos insuficientes.")
+        elif opcion == "4":
+            print("Gracias por usar el cajero. ")
+            break
+        else:
+            print("Opción no válida.")   
+
+elif(opcion == 27) :
+    estudiantes = []
+    while True:
+        print("\n1. Agregar estudiante\n2. Mostrar todos\n3. Buscar estudiante\n4. Salir")
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            nombre = input("Nombre: ")
+            edad = int(input("Edad: "))
+            estudiantes.append({"nombre": nombre, "edad": edad})
+        elif opcion == "2":
+            for e in estudiantes:
+                print(e)
+        elif opcion == "3":
+            buscar = input("Nombre del estudiante a buscar: ")
+            encontrado = False
+            for e in estudiantes:
+                if e["nombre"].lower() == buscar.lower():
+                    print("Estudiante encontrado:", e)
+                    encontrado = True
+            if not encontrado:
+                print("No encontrado.")
+        elif opcion == "4":
+            print("Saliendo...")
+            break
+        else:
+            print("Opción inválida.")
+
+
+elif(opcion == 28) :
+    
+    def sumar(a, b): return a + b
+    def restar(a, b): return a - b
+    def multiplicar(a, b): return a * b
+    def dividir(a, b): return a / b if b != 0 else "Error: división por cero"
+
+    while True:
+        print("\n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Salir")
+        op = input("Elige una opción: ")
+
+        if op == "5":
+            print("Saliendo de la calculadora.")
+            break
+
+        a = float(input("Primer número: "))
+        b = float(input("Segundo número: "))
+
+        if op == "1": print("Resultado:", sumar(a, b))
+        elif op == "2": print("Resultado:", restar(a, b))
+        elif op == "3": print("Resultado:", multiplicar(a, b))
+        elif op == "4": print("Resultado:", dividir(a, b))
+        else: print("Opción inválida.")
+
+elif (opcion == 29) :
+
+  agenda = []
+
+  while True:
+        print("\n1. Agregar contacto\n2. Ver contactos\n3. Buscar\n4. Eliminar\n5. Salir")
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            nombre = input("Nombre: ")
+            telefono = input("Teléfono: ")
+            correo = input("Correo: ")
+            agenda.append({"nombre": nombre, "telefono": telefono, "correo": correo})
+
+        elif opcion == "2":
+            for c in agenda:
+                print(c)
+
+        elif opcion == "3":
+            buscar = input("Nombre del contacto: ")
+            encontrado = False
+            for c in agenda:
+                if c["nombre"].lower() == buscar.lower():
+                    print("Contacto encontrado:", c)
+                    encontrado = True
+            if not encontrado:
+                print("No se encontró el contacto.")
+
+        elif opcion == "4":
+            eliminar = input("Nombre del contacto a eliminar: ")
+            agenda = [c for c in agenda if c["nombre"].lower() != eliminar.lower()]
+            print("Contacto eliminado si existía.")
+
+        elif opcion == "5":
+            print(" Cerrando agenda.")
+            break
+
+        else:
+            print("Opción inválida.")
+
