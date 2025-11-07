@@ -1,8 +1,8 @@
 nombre = input("ingresa tu nombre: ")
 print()
-print("="*46)
+print("="*90)
 print(f"Bienvenido al Sistema, {nombre} ingresa un numero entre 1 a 30 para iniciar el programa deseado: ")
-print("="*46)
+print("="*90)
 opcion = int(input("""
     1-Hola usuario: saluda al usuario con su nombre y edad.
     2-Suma de dos números.
@@ -11,11 +11,10 @@ opcion = int(input("""
     5-Tipo de dato: usar type() para mostrar el tipo de variables usadas anteriormente.
     6-Verifica si el usuario es mayor de edad y calcula su edad y cuanto tendra en 10 años.
     7-Verifica si el numero es negativo o positivo
-    8-Número positivo, negativo o cero.
-    9-Par o impar.
-    10-Calculadora básica con +, -, *, /.
-    11-Clasificador de notas (Excelente, Aprobado, Reprobado).
-    12-Comparador de tres números: mayor y menor.
+    8-Par o impar.
+    9-Calculadora básica con +, -, *, /.
+    10-Clasificador de notas (Excelente, Aprobado, Reprobado).
+    11-Comparador de tres números: mayor y menor.
 
 """))
 if(opcion == 1):
@@ -94,7 +93,6 @@ elif(opcion == 7):
     else :
         print("el numero es cero")
 
-
 elif(opcion == 8):
    #Pedir al usuario un número entero
     numero = int(input("Ingresa un número entero: "))
@@ -128,8 +126,7 @@ elif(opcion == 9):
     else:
         print("Operación no válida.")
 
-
-elif(opcion == 9 ):
+elif(opcion == 10 ):
     #pedir la nota al estudiante 
     nota = float("ingresa tu nota (0 a 5): ")
     #clasificar segun el valor
@@ -140,10 +137,7 @@ elif(opcion == 9 ):
     else:
         print ("preprobado")
 
-
-
-
-elif(opcion == 10):
+elif(opcion == 11):
 #pedir tres numeros
     a = float(input("ingresa el primer numero: "))
     b = float(input("ingresa el segundo numero: "))
