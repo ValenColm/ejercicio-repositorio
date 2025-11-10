@@ -214,13 +214,13 @@ elif(opcion == 14):
 elif(opcion == 15):
 #pedir al usuario el numero desde le cual desea iniciar la cuenta regresiva
     inicio = int(input("ingresa el numero desde el cual inicia la cuenta regresiva"))
-#repetir mientras el numero sea nemor o igual a cero
+#repetir mientras el numero sea mayor o igual a cero
     while inicio >= 0:
-#mostar el numero actual      
+        #mostar el numero actual      
         print("inicio")
-#restar 1 al valor del inicio en cada iteracion
+        #restar 1 al valor del inicio en cada iteracion
         inicio -= 1
-#mensaje final cundo termina la cuenta    
+        #mensaje final cundo termina la cuenta    
         print("!iniciar¡")
 
 elif(opcion == 16): 
