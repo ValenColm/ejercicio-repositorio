@@ -59,15 +59,7 @@ print(numeros.index(7))
 
 
 
-1️⃣ Impuestos: impuesto(precio, iva=19)
 
-def impuesto(precio, iva=19):
-    """Devuelve el precio final con IVA incluido."""
-    return precio * (1 + iva / 100)
-
-# Ejemplo:
-print(impuesto(100))       # 119.0
-print(impuesto(200, 10))   # 220.0
 
 
 
