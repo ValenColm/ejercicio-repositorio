@@ -135,8 +135,8 @@ print(numeros.index(7))
 #impuestos
 
 def impuesto(precio, iva=19):
-     """Devuelve el precio final con IVA incluido."""
-     return precio * (1 + iva / 100)
+    "Devuelve el precio final con IVA incluido."
+    return precio * (1 + iva / 100)
 
 # Ejemplo:
 print(impuesto(100))       
@@ -160,7 +160,7 @@ print(promedio([]))
 #CONTAR VOCALES
 
 def contar_vocales(texto):
-    """Cuenta el número de vocales en un texto."""
+    "Cuenta el número de vocales en un texto."
     texto = texto.lower()
     contador = 0
     for letra in texto:

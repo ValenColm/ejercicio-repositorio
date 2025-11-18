@@ -157,3 +157,6 @@ personas = [("Ana", 25), ("Luis", 30), ("Mia", 20)]
 ordenadas = sort(personas, key=lambda x: x[1])
 print(ordenadas)
 
+
+
+
