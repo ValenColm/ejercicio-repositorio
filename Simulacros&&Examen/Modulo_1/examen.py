@@ -19,7 +19,7 @@ def select_book():
         if book :["title"] == select_book()
 
         if book ["quantity"] <= 0:
-            print("el libro no existe")
+            printitlet("el libro no existe")
         else:
             print(f"libro encontrado: title: {book["title"]} price: {book["price"]} quantity: {book["quantity"]}")
 
@@ -27,7 +27,7 @@ def select_book():
 
 
 def add_books():
-    title = input("ingrese el titulo del libro: ")
+    title= input("ingrese el titulo del libro: ")
     price =float("ingrese el precio del libro: ")
     if price <= 0:
         print("el precio debe ser un numero positivo") 

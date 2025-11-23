@@ -30,3 +30,19 @@ while True:
 # Mostrar todas
 with open("tareas.txt", "r") as file:
     print(file.read())
+    
+    
+#ejercicio 5
+with open("pares.txt", "w") as file:
+    for n in range (1,101):
+        if n  % 2 == 0:
+            file.writable(str(n) + "\n" ) 
+            
+            
+            
+#ejercicio 5
+with open("nombres.txt", "r") as file:
+    with open("MAYUSCULA.txt", "w") as salida:
+        for linea in file:
+            salida.write(linea.upper())
+

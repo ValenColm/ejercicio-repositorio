@@ -1,26 +1,26 @@
 #impuestos
 
-# def impuesto(precio, iva=19):
-#     """Devuelve el precio final con IVA incluido."""
-#     return precio * (1 + iva / 100)
+def impuesto(precio, iva=19):
+     """Devuelve el precio final con IVA incluido."""
+     return precio * (1 + iva / 100)
 
-# # Ejemplo:
-# print(impuesto(100))       
-# print(impuesto(200, 10))   
+ # Ejemplo:
+print(impuesto(100))       
+print(impuesto(200, 10))   
 
 
 #PROMEDIO SEGURO
 
-# def promedio(numeros):
-#     """Devuelve el promedio de una lista o 0 si está vacía."""
-#     if len(numeros) == 0:
-#         return 0
-#     return sum(numeros) / len(numeros)
+def promedio(numeros):
+     "Devuelve el promedio de una lista o 0 si está vacía."
+     if len(numeros) == 0:
+         return 0
+     return sum(numeros) / len(numeros)
 
 # Ejemplo:
-#print(promedio([4, 6, 8]))  
-#print(promedio([]))
-      
+print(promedio([4, 6, 8]))  
+print(promedio([]))
+
 
 
 #CONTAR VOCALES
