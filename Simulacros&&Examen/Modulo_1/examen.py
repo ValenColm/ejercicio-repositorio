@@ -19,7 +19,7 @@ def select_book():
         if book :["title"] == select_book()
 
         if book ["quantity"] <= 0:
-            printitlet("el libro no existe")
+            print("el libro no existe")
         else:
             print(f"libro encontrado: title: {book["title"]} price: {book["price"]} quantity: {book["quantity"]}")
 
