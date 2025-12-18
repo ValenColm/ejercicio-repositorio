@@ -1,0 +1,658 @@
+/* ===================================
+   VARIABLES CSS (Sistema de Diseño)
+   =================================== */
+:root {
+    /* Colores Primarios */
+    --color-red-500: hsl(356, 100%, 66%);
+    --color-red-400: hsl(355, 100%, 74%);
+    --color-blue-900: hsl(208, 49%, 24%);
+    
+    /* Colores Neutrales */
+    --color-white: hsl(0, 100%, 100%);
+    --color-gray-600: hsl(207, 13%, 34%);
+    --color-gray-900: hsl(240, 10%, 16%);
+    
+    /* Gradientes */
+    --gradient-header: linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    
+    /* Tipografía */
+    --font-primary: 'Overpass', sans-serif;
+    --font-secondary: 'Ubuntu', sans-serif;
+    
+    /* Espaciados */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Transiciones */
+    --transition-fast: 200ms ease;
+    --transition-base: 300ms ease;
+    
+    /* Sombras */
+    --shadow-dropdown: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --shadow-mobile-menu: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   RESET Y BASE
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray-900);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* ===================================
+   FIRST SECTION - HERO (Imagen 1)
+   =================================== */
+.firstSection {
+    background: var(--gradient-header);
+    min-height: 600px;
+    border-bottom-left-radius: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 5%;
+}
+
+/* Patrón decorativo de fondo */
+.firstSection::before {
+    content: '';
+    position: absolute;
+    top: -280px;
+    left: -300px;
+    width: 1400px;
+    height: 1400px;
+    background: url('../simulacro/assets/bg-pattern-intro-desktop\(1\).svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+.header1 {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   PARTE SUPERIOR - Navegación Desktop (Imagen 1)
+   =================================== */
+.parte-superior {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 2rem;
+}
+
+/* Logo - Según diseño */
+.nav__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.5px;
+}
+
+/* ===================================
+   NAVEGACIÓN PRINCIPAL
+   =================================== */
+.nav__menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav_list {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+/* Items de navegación */
+.nav_product,
+.nav_company,
+.nav_connect {
+    position: relative;
+}
+
+/* Botones de navegación - Exacto al diseño */
+.product,
+.Company,
+.Connect {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.25rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-white);
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    opacity: 0.85;
+}
+
+.product:hover,
+.Company:hover,
+.Connect:hover {
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* Flechas SVG - Según diseño */
+.nav__arrow {
+    transition: transform var(--transition-base);
+    margin-left: 0.25rem;
+}
+
+.product[aria-expanded="true"] .nav__arrow,
+.Company[aria-expanded="true"] .nav__arrow,
+.Connect[aria-expanded="true"] .nav__arrow {
+    transform: rotate(180deg);
+}
+
+/* ===================================
+   DROPDOWNS - Desktop (Imagen 2)
+   =================================== */
+.list_product,
+.list_company,
+.list_connect {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1.75rem);
+    left: -1.5rem;
+    background-color: var(--color-white);
+    padding: 1.5rem 1.75rem;
+    border-radius: 5px;
+    min-width: 168px;
+    box-shadow: var(--shadow-dropdown);
+    z-index: 200;
+    animation: dropdownSlide 0.25s ease;
+}
+
+@keyframes dropdownSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mostrar dropdowns - hover y focus */
+.nav_product:hover .list_product,
+.nav_company:hover .list_company,
+.nav_connect:hover .list_connect,
+.nav_product:focus-within .list_product,
+.nav_company:focus-within .list_company,
+.nav_connect:focus-within .list_connect,
+.product[aria-expanded="true"] ~ .list_product,
+.Company[aria-expanded="true"] ~ .list_company,
+.Connect[aria-expanded="true"] ~ .list_connect {
+    display: block;
+}
+
+/* Links dentro de dropdowns - Exacto al diseño */
+.list_product li,
+.list_company li,
+.list_connect li {
+    margin-bottom: 0.85rem;
+}
+
+.list_product li:last-child,
+.list_company li:last-child,
+.list_connect li:last-child {
+    margin-bottom: 0;
+}
+
+.list_product a,
+.list_company a,
+.list_connect a {
+    display: block;
+    padding: 0.25rem 0;
+    color: var(--color-gray-600);
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: all var(--transition-fast);
+}
+
+.list_product a:hover,
+.list_company a:hover,
+.list_connect a:hover {
+    color: var(--color-gray-900);
+    font-weight: 700;
+}
+
+/* ===================================
+   LOGIN / SIGNUP - Según diseño (Imagen 1)
+   =================================== */
+.login-signup {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+}
+
+.login {
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    transition: all var(--transition-fast);
+    opacity: 0.85;
+}
+
+.login:hover {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 2.5rem;
+    border-radius: 24px;
+    background-color: var(--color-white);
+    color: var(--color-red-500);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.signup:hover {
+    background-color: hsl(355, 100%, 74%);
+    color: var(--color-white);
+}
+
+/* ===================================
+   PARTE INFERIOR - Hero Content (Imagen 1)
+   =================================== */
+.parte-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 7rem;
+    padding: 0 2rem;
+}
+
+.parte-inferior h1 {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.parte-inferior p {
+    color: var(--color-white);
+    font-size: 1.25rem;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 3rem;
+}
+
+/* ===================================
+   BOTONES START / LEARN (Imagen 1)
+   =================================== */
+.start-learn {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 9rem;
+}
+
+.start-learn a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 2rem;
+    border-radius: 24px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.start-a-1 {
+    background-color: var(--color-white);
+    color: var(--color-red-500);
+}
+
+.start-a-1:hover {
+    background-color: hsl(355, 100%, 74%);
+    color: var(--color-white);
+}
+
+.learn-a {
+    border: 1px solid var(--color-white);
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+.learn-a:hover {
+    background-color: var(--color-white);
+    color: var(--color-red-500);
+}
+
+/* ===================================
+   ACCESIBILIDAD
+   =================================== */
+*:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
+}
+
+/* ===================================
+   RESPONSIVE - TABLET (768px - 1024px)
+   =================================== */
+@media (max-width: 1024px) {
+    .firstSection {
+        padding: 3rem 4%;
+    }
+    
+    .parte-superior {
+        gap: 2.5rem;
+    }
+    
+    .nav_list {
+        gap: 1.5rem;
+    }
+    
+    .login-signup {
+        gap: 1.5rem;
+    }
+    
+    .parte-inferior {
+        margin-top: 5rem;
+    }
+    
+    .parte-inferior h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+    
+    .start-learn {
+        margin-bottom: 6rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - MÓVIL (Imágenes 3 y 4)
+   =================================== */
+@media (max-width: 768px) {
+    .firstSection {
+        padding: 3.5rem 1.5rem;
+        min-height: auto;
+        border-bottom-left-radius: 100px;
+    }
+    
+    .firstSection::before {
+        background-image: url('../simulacro/assets/bg-pattern-intro-desktop\(1\).svg');
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+    }
+    
+    /* HEADER MÓVIL */
+    .header1 {
+        position: relative;
+    }
+    
+    .parte-superior {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding-bottom: 0;
+        position: relative;
+    }
+    
+    .nav__logo {
+        z-index: 1001;
+    }
+    
+    .logo {
+        font-size: 1.75rem;
+    }
+    
+    /* MENÚ MÓVIL - Fondo blanco (Imagen 4) */
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 2rem);
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: var(--shadow-mobile-menu);
+        z-index: 1000;
+    }
+    
+    .nav__menu.active {
+        display: block;
+        animation: mobileMenuSlide 0.3s ease;
+    }
+    
+    @keyframes mobileMenuSlide {
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .nav_list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .nav_product,
+    .nav_company,
+    .nav_connect {
+        width: 100%;
+        text-align: center;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav_connect {
+        border-bottom: none;
+    }
+    
+    /* Botones en móvil - Color oscuro (Imagen 4) */
+    .product,
+    .Company,
+    .Connect {
+        width: 100%;
+        justify-content: center;
+        color: var(--color-blue-900);
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 0.5rem;
+        opacity: 1;
+    }
+    
+    .nav__arrow {
+        stroke: hsl(356, 100%, 66%);
+        margin-left: 0.5rem;
+    }
+    
+    /* DROPDOWNS MÓVIL - Fondo gris claro (Imagen 4) */
+    .list_product,
+    .list_company,
+    .list_connect {
+        position: static;
+        margin-top: 1.5rem;
+        background-color: hsl(0, 0%, 96%);
+        box-shadow: none;
+        border-radius: 5px;
+        padding: 1.25rem;
+        animation: none;
+    }
+    
+    .list_product li,
+    .list_company li,
+    .list_connect li {
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    
+    .list_product a,
+    .list_company a,
+    .list_connect a {
+        text-align: center;
+        color: var(--color-gray-600);
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .list_product a:hover,
+    .list_company a:hover,
+    .list_connect a:hover {
+        background-color: transparent;
+    }
+    
+    /* LOGIN/SIGNUP MÓVIL (Imagen 4) */
+    .login-signup {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        gap: 1rem;
+        margin: 0;
+    }
+    
+    .login {
+        color: var(--color-gray-600);
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+        font-size: 1.125rem;
+        opacity: 1;
+    }
+    
+    .signup {
+        width: 100%;
+        background: linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: var(--color-white);
+        height: 48px;
+    }
+    
+    .signup:hover {
+        background: linear-gradient(135deg, hsl(13, 100%, 76%), hsl(353, 100%, 66%));
+        color: var(--color-white);
+    }
+    
+    /* HERO MÓVIL */
+    .parte-inferior {
+        margin-top: 6rem;
+        padding: 0 1rem;
+    }
+    
+    .parte-inferior h1 {
+        font-size: clamp(2rem, 7vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .parte-inferior p {
+        font-size: 1.125rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .start-learn {
+        flex-direction: row;
+        gap: 1rem;
+        margin-bottom: 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .start-learn a {
+        min-width: 140px;
+    }
+}
+
+/* ===================================
+   MÓVIL PEQUEÑO (< 480px)
+   =================================== */
+@media (max-width: 480px) {
+    .firstSection {
+        padding: 3rem 1.25rem;
+    }
+    
+    .parte-inferior h1 {
+        font-size: 2rem;
+    }
+    
+    .start-learn {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .start-learn a {
+        width: 100%;
+        max-width: 280px;
+    }
+}s
+
+.nav_product:focus-within .list_product,
+.nav_company:focus-within .list_company,
+.nav_connect:focus-within .list_connect {
+  display: block;
+}

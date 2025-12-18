@@ -1,0 +1,69 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafa;
+  margin: 0;
+  padding: 0;
+  color: #0F2C59; 
+}
+
+
+/* ======== TÍTULOS ======== */
+h1 {
+  color: #0F2C59;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0F2C59;
+  margin-top: 30px;
+}
+
+/* ======== TEXTOS ======== */
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ======== INPUTS ========= */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  border: 2px solid #A8F1E7;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #fff;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6FE3D5;
+  box-shadow: 0 0 6px rgba(111, 227, 213, 0.5);
+}
+
+/* ======== LABELS ======== */
+label {
+  font-weight: bold;
+  color: #0F2C59;
+}
+
+
+/* ======== CHECKBOX y RADIO ======== */
+input[type="checkbox"],  
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6FE3D5;
+}
+
+/* ======== SECCIONES ======== */
+.section-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #0F2C59;
+}
+

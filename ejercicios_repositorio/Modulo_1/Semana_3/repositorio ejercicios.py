@@ -7,10 +7,10 @@ while True:
         print("2 - convertir a grados  farenheit")
         opcion=input("elige una opcion")
         
-        if opcion == "1":
+        if opcion == 1:
             resultado = (temperatura - 32) * 5/9 
             print(f"{temperatura} °f eauivalente a {resultado: .2f}")
-        elif opcion :
+        elif opcion == 2:
             resultado = (temperatura * 9/5) + 32
             print(f"{temperatura} °c equivalente a {resultado: .2f}")
         else:
@@ -102,14 +102,14 @@ def es_palindromo(texto):
     return t == t[::-1]
 
 
-import utils_string as utils
+
 
 texto = input("Ingresa un texto: ")
 
-print(utils.contar_vocales(texto))
-print(utils.invertir(texto))
-print(utils.contar_palabras(texto))
-print("¿Es palíndromo?:", utils.es_palindromo(texto))
+print(contar_vocales(texto))
+print(invertir(texto))
+print(contar_palabras(texto))
+print("¿Es palíndromo?:", es_palindromo(texto))
 
 
 

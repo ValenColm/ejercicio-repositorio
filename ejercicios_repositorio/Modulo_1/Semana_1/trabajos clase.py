@@ -64,22 +64,4 @@ print(mi_lista)
 mi_lista.reverse()
 
 
- #area = 0
-# base = float(input("ingresa la base del triangulo"))
-# altura = float(input("ingresa la altura del triangulo"))
-# area = (base * altura) 
-# print(f"el area del terreno es de {area}")
-# costo = (area * 36799)
-# print(f"el costo del terreno es de {costo}")
-
-
-
-
-# numeros = [1, 2, 3, 4, 5]
-# for n in numeros:
-#     if n == 3:
-#         print("Saltando el número 3")
-#         continue # Pasa a la siguiente iteración
-#     print(n)
-
 

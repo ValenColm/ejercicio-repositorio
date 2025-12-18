@@ -1,0 +1,194 @@
+
+/* --- Estilos generales del cuerpo de la página --- */
+body {
+    font-family: "poppins", Arial,sans-serif; /* Tipo de letra */
+    background: #f4f0ff; /* Color de fondo claro */
+    color: #333;
+    margin: 20px;
+    padding: 0px;
+}
+
+header {
+    background: linear-gradient(to right, #c3b4ff, #bde4f4);
+    padding: 40px 20px;
+    text-align: center;
+    color: #333;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 15px rgb(0,0,0,0.15);
+    animation: fadedown o.8s ease;
+}
+
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+
+/* --- Animación suave --- */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Contenedor principal donde va todo el contenido --- */
+section {
+    max-width: 900px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    padding: 0; /* Espaciado interno */
+}
+
+/* --- Estilo del título principal --- */
+h2 {
+    text-align: center; /* Centra el texto */
+    color: #333; /* Color oscuro del texto */
+    margin-bottom: 30px; /* Separación hacia abajo */
+    text-transform: uppercase; /* Título en mayúsculas */
+    font-size: 28px;
+    letter-spacing: 2px;
+    animation: fade 1s ease ;
+}
+
+.descripcion{
+    text-align: center;
+}
+
+.lista_proyectos{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+}
+#proyecto{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Cada artículo representa una mascota --- */
+article {
+    background: white; /* Fondo blanco para que destaque */
+    padding: 20px; /* Espacio interno */
+    border-radius: 20px; /* Bordes redondeados */
+    margin-bottom: 35px; /* Separación entre tarjetas */
+    display: flex; /* Imagen y texto uno al lado del otro */
+    gap: 20px; /* Espacio entre imagen y texto */
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* Sombra suave para efecto tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Hover suave para tarjetas --- */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* --- Estilo de las imágenes de las mascotas --- */
+article img {
+    border-radius: 15px; /* Bordes redondeados a la imagen */
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgb(0,0,0,0.1);
+}
+
+
+/* --- Texto de la descripción de cada mascota --- */
+article p {
+    color: #555; /* Color gris suave del texto */
+    font-size: 16px; /* Tamaño de letra */
+    line-height: 1.6;
+}
+
+/* --- Enlace para volver al portafolio --- */
+a {
+    display: inline-block; /* Se comporta como botón */
+    margin-top: 20px; /* Espacio arriba */
+    text-decoration: none; /* Quita el subrayado */
+    color: white; /* Texto blanco */
+    background: linear-gradient(to right, #7aa8ff, #7ec8e3);
+    padding: 12px 20px; /* Espacio interno del botón */
+    border-radius: 12px; /* Esquinas redondeadas */
+    font-weight: bold; /* Texto más grueso */
+    font-size: 16px;
+    letter-spacing:1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Hover del botón (cuando pasas el mouse por encima) --- */
+a:hover {
+    background: linear-gradient(to right, #5f8ff9, #63b5d4);/* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+
+#contacto {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Estilo del formulario */
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs y textarea */
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #d7caff;
+    background: #f7f4ff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Efecto al enfocar */
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #b7a3ff;
+    box-shadow: 0 0 8px rgba(147, 112, 255, 0.3);
+}
+
+/* Botón bonito */
+.formulario button {
+    background: linear-gradient(to right, #c9b6ff, #a1d7ff);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.formulario button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+
+
+

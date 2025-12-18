@@ -1,0 +1,177 @@
+Como se crea un cuadro
+
+display: grid
+gap:
+
+background-color
+
+border-radius
+
+padding
+
+tamaños (grid-template-columns / rows)
+
+
+
+<div class="card">
+  <div class="card-header">
+    <h3>About</h3>
+    <span>⭐</span>
+  </div>
+
+  <p>Texto de ejemplo dentro de la card.</p>
+
+  <button>Ver más</button>
+</div>
+
+
+
+
+
+
+.card {
+  /* 🔷 GRID → estructura */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  width: 320px;
+  height: 220px;
+
+  background-color: #f2f2f2;
+  border-radius: 18px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+/* 🔷 FLEX → solo dentro de UNA fila */
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* botón centrado con grid */
+.card button {
+  justify-self: center;
+}
+
+
+
+HTML
+
+<div class="card">
+  <div class="card-content">
+    <h3>Título</h3>
+    <p>Texto de ejemplo</p>
+    <button>Botón</button>
+  </div>
+</div>
+
+
+---
+
+CSS
+
+.card {
+  /* 🔷 GRID → crea el cuadro */
+  display: grid;
+grid-template-rows: auto 1fr auto;
+  width: 320px;
+  height: 220px;
+  background-color: #f2f2f2;
+  border-radius: 18px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.card-content {
+  /* 🔷 FLEX → organiza los elementos */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+1rem = 16px
+1.5rem = 24px
+0.5rem = 8px 
+Esto permite que si un usuario cambia el tamaño de letra en su navegador por accesibilidad, tu sitio se adapte proporcionalmente.
+
+Propiedad	Afecta a	Dirección
+
+align-content	todo el grid	vertical (acostado)
+
+justify-content	todo el grid	horizontal (parado)
+
+align-items	cada item	vertical 
+
+justify-items	cada item	horizontal
+
+
+/* Teléfonos pequeños (0–480px) */
+@media (max-width: 480px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+/* Teléfonos grandes y tablets pequeñas (481–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Tablets y laptops pequeñas (769–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Laptops y escritorios grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+  body {
+    background-color: lightgray;
+  }
+}
+
+crear cuadro con Flexbox
+
+<div class="contenedor-flex">
+  <div class="item">Cuadro 1</div>
+  <div class="item">Cuadro 2</div>
+  <div class="item">Cuadro 3</div>
+</div>
+
+.contenedor-flex {
+  display: flex; /* ¡Activa Flexbox! */
+  /* flex-direction: row; */ /* Por defecto, los items van en fila (horizontal) */
+  /* flex-direction: column; */ /* Para que vayan en columna (vertical) */
+  /* flex-wrap: wrap; */ /* Para que los ítems se envuelvan a la siguiente línea si no caben */
+  justify-content: center; /* Alinea horizontalmente (eje principal) */
+  align-items: center; /* Alinea verticalmente (eje secundario) */
+  gap: 10px; /* Espacio entre los ítems */
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 300px; /* Opcional, para ver mejor la alineación vertical */
+}
+
+.item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #333;
+  /* flex-grow: 1; */ /* Hace que el ítem ocupe espacio extra */
+  /* flex-basis: 150px; */ /* Ancho base del ítem */
+}
+
+
+
+
+
+paginas para colores y sombras
+
+boxshadow
+cssgradiendt
