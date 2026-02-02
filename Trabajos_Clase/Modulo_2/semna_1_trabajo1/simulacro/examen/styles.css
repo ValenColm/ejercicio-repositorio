@@ -1,0 +1,75 @@
+/* ===== AUTH PAGES ===== */
+
+.auth-body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  text-align: center;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: left;
+  color: hsl(240, 10%, 16%);
+}
+
+.auth-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: hsl(356, 100%, 66%);
+}
+
+.auth-form button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.auth-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: hsl(356, 100%, 66%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+

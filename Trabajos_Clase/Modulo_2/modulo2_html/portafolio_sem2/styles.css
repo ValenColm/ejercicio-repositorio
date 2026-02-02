@@ -196,13 +196,11 @@ a:hover {
 
 .item img {
   width: 80%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   border-radius: 15px;
+  overflow: hidden;
 }
-
-
-
 
 
 
@@ -260,6 +258,28 @@ a:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-
-
-
+@media(max-width:37em){
+    header{
+        display: grid;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+    .lista_proyectos{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .formulario{
+        display: flex;
+        align-items: center;
+    }
+    body{
+    grid-template-columns: 1fr;
+    }
+    .tarjeta{
+        display: grid;
+        justify-items: center;
+        text-align: center;
+    }
+}

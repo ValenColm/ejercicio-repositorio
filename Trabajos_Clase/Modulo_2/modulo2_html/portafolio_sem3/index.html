@@ -3,73 +3,65 @@
 <html lang="es">
 <!-- Define que el idioma principal del sitio es español -->
 
-<head>
-    <meta charset="UTF-8">
-    <!-- Permite usar caracteres como letras con tilde -->
-    <meta name="viewport" content="widt=device-width,initial-scale=1.0">
-    <!-- Adapta la página al tamaño de pantallas pequeñas (celulares) -->
 
-    <title>MI PORTAFOLIO - VALENTINA BOLIVAR</title>
-    <!-- Título que aparece en la pestaña del navegador -->
-    <link rel ="Stylesheet" href="styles.css">
-    <!-- Vincula tu archivo CSS para darle estilo a la página -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI PORTAFOLIO - VALENTINA BOLIVAR</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header"> 
-        <h1 >valentina bolivar</h1>
-        <!-- Título principal de tu portafolio -->
-    
-        <nav>
-            <ul class= "menu">
-            <!-- Menú de navegación -->
-                <li><a href="mascotas.html" target="_blank">mis mascotas</a></li>
-            </ul>    
-            <!-- Enlace que lleva  a la página de mascotas -->
-        </nav>
-    </header>
 
+<header class="header">
+  <h1>Valentina Bolívar</h1>
 
-<section id="sobre-mi" class="sección">
-    <h2 class="subtitulo">SOBRE MI</h2>
-<!-- Primera sección: información personal -->
+  <nav>
+    <ul class="menu">
+      <li><a href="mascotas.html" target="_blank">Mis mascotas</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <p class="descripcion">
-        mi nombre es valentina. 
-        estoy aprendiendo html y esta es mi primera pagina
-    </p>
-    <!-- Texto descriptivo sobre mi -->
+<section id="sobre-mi" class="seccion">
+  <h2>Sobre mí</h2>
+  <p class="descripcion">
+    Mi nombre es Valentina.  
+    Estoy aprendiendo HTML y este es mi primer portafolio.
+  </p>
 </section>
 
-<section id= "proyecto" class="sección">
-    <h2 class="subtitulo">MIS PROYECTOS</h2>
-    <!-- Segunda sección: proyectos -->
-        <ul class="lista_proyectos">
-            <li class="caja1"><a href="https://share.google/i3FxOx5Dm2ymEn4C3" target="_blank">proyecto 1</a></li>
-            <li class="caja1"><a href="https://share.google/tuoOuwwDwxgfvAHcU" target="_blank" >proyecto 2</a></li>
-            <li class="caja1"><a href="https://share.google/jwPuv9g3gRJpV9XpI" target="_blank">proyecto 3</a></li>
-        </ul>
-        </section>
+<section id="proyecto" class="seccion">
+  <h2>Mis proyectos</h2>
 
-        <section id="contacto" class="sección">
-            <!-- Tercera sección: formulario de contacto -->
-            <h2 class="subtitulo">CONTACTO</h2>
-            <form  class="formulario" method="post" enctype="text/plain">
-                <!-- Formulario para enviar un mensaje -->
-                <input type="text" placeholder="Nombre" required>
-                <!-- Campo para escribir el nombre -->
-                <input type="email" placeholder="Correo" required>
-                <!-- Campo para escribir el correo -->
-                <textarea aria- placeholder="escribe tu mensaje aqui" rows="5"></textarea>
-                <!-- Área para escribir el mensaje, más grande que un input -->
-                <button type="submit">enviar mensaje</button>
-                <!-- Botón para enviar el formulario -->
-            </form>
-        </section>
+  <ul class="lista_proyectos">
+    <li><a href="#" target="_blank">Proyecto 1</a></li>
+    <li><a href="#" target="_blank">Proyecto 2</a></li>
+    <li><a href="#" target="_blank">Proyecto 3</a></li>
+  </ul>
+</section>
 
-        <footer class="footer">
-            <p>© 2025 · Creado con cariño por Valentina </p>
-        </footer>
+<section id="contacto" class="seccion">
+  <h2>Contacto</h2>
 
+  <form class="formulario">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
+    <textarea placeholder="Escribe tu mensaje aquí" rows="5"></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>© 2025 · Creado con cariño por Valentina</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+

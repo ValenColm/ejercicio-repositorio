@@ -1,0 +1,815 @@
+@import url('./global.css');
+
+/* ------------ HEADER ------------ */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-neutral-silver);
+}
+
+.logo{
+    padding: 30px 0px;
+}
+
+.nav-header ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+
+}
+
+.nav-header ul a{
+    text-decoration: none;
+    color: #18191F;
+      display: block; 
+  width: 100%; 
+  padding: 20px; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+.nav-header ul a:hover,
+.nav-header ul a:focus-visible{
+   border-left: 10px solid #66BB69;
+}
+.nav-header ul a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+  z-index: -1;
+}
+nav ul a:hover:after{ width: 100%; }
+nav ul:first-child a:after{ background: #3498db; }
+nav ul:nth-child(2) a:after{ background: #ffd071; }
+nav ul:nth-child(3) a:after{ background: #f0776c; }
+nav ul:last-child a:after{ background: #1abc9c; }
+.active{
+    font-weight: bold;
+}
+
+.btn-login{
+    color: black;
+    background-color: #4CAF4F;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.btn-login:hover,
+.btn-login:focus-visible{
+    color: gray;
+    background-color: #e3e9e3;
+    transform: scale(1.05);
+}
+
+
+.btn-header{
+    gap: 14px;
+    padding: 22px 0px;
+}
+
+
+
+/* ------------ END HEADER ------------ */
+
+/* ------------ MAIN ------------ */
+
+main{
+    display: flex;
+    background-color: var(--color-neutral-silver);
+    align-items: center;
+    justify-content: center;
+    gap: 104px;
+    padding: 96px 0px;
+}
+
+.content-lessons{
+    width: 657px;
+}
+.btn-primary:hover,
+.btn-primary:focus-visible{
+    transform: scale(1.05);
+    color: gray;
+    background-color: #e3e9e3;
+}
+
+h1{
+    font-size: 64px;
+    color: var(--color-neutral-d_grey);
+    font-weight: 600;
+}
+
+.content-lessons h1 span{
+    color: var(--color-primary);
+}
+
+.content-lessons p{
+    margin-top: 16px;    
+}
+
+
+/* ------------ END MAIN ------------ */
+
+/* ------------ OUR CLIENTS ------------ */
+
+.our-client{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.our-client p{
+    margin-top: 8px;
+}
+
+.logo-clients{
+    display: flex;
+    justify-content: center;
+    gap: 136px;
+    padding: 25px 0px;    
+    margin-top: 16px;
+}
+
+/* ------------ END OUR CLIENTS ------------ */
+
+/* ------------ MANAGE SYSTEM ------------ */
+
+.manage-system{    
+    text-align: center;
+    margin-top: 40px;    
+}
+
+.manage-system h2{
+    width: 542px;
+    margin: 0 auto;
+}
+
+#manage-system-subtitle{
+    margin-top: 8px;
+}
+
+.cards-container{
+    display: flex;
+    margin-top: 16px;
+    gap: 127.5px;
+    justify-content: center;
+}
+
+.cards-container article{
+    width: 299px; 
+    box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
+    padding: 24px 16px;
+    text-align: center;
+    border-radius: 8px; 
+    transition: 0.5s;
+}
+
+.cards-container article:hover,
+.cards-container article:focus-within{
+    box-shadow: 0px 8px 12px rgba(171, 190, 209, 0.5);
+    transform: translateY(-8px);
+}
+
+.cards-container article img{
+    width: 65px;
+    height: 56px;
+}
+
+.cards-container article h3{
+    color: var(--color-neutral-d_grey);
+    font-size: 28px;
+    margin-bottom: 8px;
+    width: 231px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.cards-container article p{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ------------ END MANAGE SYSTEM ------------ */
+
+/* ------------ Pixelgrade ------------ */
+
+
+.pixelgrade{
+    display: flex;
+    justify-content: center;
+    gap: 49px;
+    padding: 52px;
+    margin-top: 42px;
+}
+
+.pixelgrade-content{
+    width: 661px;
+}
+
+.pixelgrade-content h2{
+    width: 526px;
+}
+
+.pixelgrade-content p{
+    margin-top: 16px;
+
+}
+
+/* ------------ END Pixelgrade ------------ */
+
+
+/* ------------ Helping Local ------------ */
+
+.helping-local{
+    display: flex;
+    justify-content: center;
+    margin: 48px 0px;
+    background-color: var(--color-neutral-silver);
+    align-items: center;
+    gap: 204px;
+    padding: 64px 0px;
+}
+
+.helping-content h2{
+    width: 390px;
+}
+
+.helping-content h2 span{
+    color: var(--color-primary);
+}
+
+.helping-content p{
+    margin-top: 8px;
+    color: #18191F;
+}
+
+.helping-statistic{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;    
+}
+
+.helping-itens{
+    display: flex;
+    gap: 16px
+}
+
+.helping-itens img{
+    width: 48px;
+}
+
+.information-itens{
+    text-align: start;
+
+}
+
+/* ------------ END Helping Local ------------ */
+
+
+/* ------------------------------ HOW DESIGN ------------------------------ */ 
+.how-design{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0px;
+    gap: 49.47px;
+}
+
+.how-design h2{
+    width: 601px;
+}
+
+.how-design p{
+    margin-top: 16px;
+    width: 680px;
+    line-height: 1.5;
+}
+
+/* ------------------------------ END HOW DESIGN ------------------------------ */ 
+
+/* ------------------------------ CUSTOMER ------------------------------ */ 
+
+.customer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 78px;
+    background-color: var(--color-neutral-silver);
+}
+
+.customer-content{
+    width: 748px;    
+}
+
+.customer-content p{
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.customer-content h2{
+    color: var(--color-primary);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.customer-content p:nth-of-type(2){
+    color: var(--color-neutral-L_grey);    
+}
+
+.customer-container{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.customer-itens{
+    display: flex;
+    gap: 41px;
+}
+
+.customer-itens img{
+    width: 48px;
+}
+
+.customer-navigation a{
+    display: flex;     
+    text-decoration: none;
+    gap: 8px;
+}
+
+.customer-navigation a p{
+    color: var(--color-primary);
+    margin: 0;    
+}
+
+/* ------------------------------ END CUSTUMER ------------------------------ */ 
+
+
+/* ------------------------------ CARING MARKETING ------------------------------ */ 
+
+
+.caring-marketing{
+    text-align: center;    
+}
+
+.caring-marketing h2{
+    margin-top: 48px;
+    margin-bottom: 8px;
+}
+
+.caring-marketing-p{    
+    width: 628px;    
+    margin: 0 auto; 
+}
+
+.caring-marketing-container{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 94.6px;
+}
+
+.caring-cards{
+    width: 368px;
+    position: relative;
+}
+
+.caring-cards-content{
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: var(--color-neutral-silver);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 3px rgba(171, 190, 209, 0.4);
+    width: 317px;    
+    position: absolute;
+    bottom: -53px;
+    left: 25px;
+}
+
+.caring-cards-content h3{
+    font-size: 20px;
+    color: var(--color-neutral-grey);
+}
+
+.caring-cards-content a{
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 24px; 
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+}
+.caring-cards-content a:hover{
+    background-color: #e3e9e3;
+    transform: scale(1.05);
+}
+.caring-cards-content a p{
+    color: var(--color-primary);    
+}
+
+/* ------------------------------ END CARING MARKETING ------------------------------ */ 
+
+/* ------------------------------ PELLENTESQUE ------------------------------ */ 
+
+.pellentesque{
+    text-align: center;
+    background-color: var(--color-neutral-silver);
+    padding: 32px 0;
+}
+
+.pellentesque a{
+    text-decoration: none;
+}
+
+.pellentesque h2{
+    font-size: 64px;
+    width: 670px;
+    margin: 0 auto;
+    padding: 32px 0px;
+}
+
+.pellentesque button{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 8px;    
+}
+
+/* ------------------------------ END PELLENTESQUE ------------------------------ */ 
+
+
+/* ------------------------------ FOOTER ------------------------------ */ 
+
+footer{
+    background-color: var(--color-neutral-black);
+    display: flex;    
+    justify-content: center;
+    gap: 284px;
+    padding: 64px 0;
+}
+
+.copyright{
+    margin: 40px 0;
+}
+
+.copyright p{
+    color: var(--color-neutral-silver);
+}
+
+.copyright p:nth-of-type(1){
+    margin-bottom: 8px;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons{
+    background-color: #3C474C;
+    padding: 7.47px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.social-icons:hover{
+    transform: translateY(-10px);
+    background-color: var(--color-primary); 
+}
+
+.footer-navigation{
+    display: flex;
+    gap: 97px;
+}
+
+.footer-navigation h2{
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: var(--color-neutral-white);
+}
+
+.footer-links{
+    list-style: none;
+    font-size: 14px;    
+}
+
+.footer-item{
+    color: var(--color-neutral-silver);
+    text-decoration: none;
+    display: block;    
+    margin-bottom: 12px;  
+    transition: 0.4s;  
+}
+
+.footer-item:hover,
+.footer-item:focus-visible{
+    color: var(--color-primary);
+    transform: translateX(10px);
+}
+
+.footer-container form{
+    display: flex;
+    align-items: center;
+}
+
+.footer-container form input{
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #D9DBE1;
+    outline: none;    
+}
+
+.footer-container form input::placeholder{
+    color: #D9DBE1;
+}
+
+.stay-button{
+    padding: 8.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stay-button:hover{
+    background-color: var(--color-primary);
+}
+
+
+/* ------------------------------ END FOOTER ------------------------------ */ 
+
+
+@media (max-width: 480px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .nav-header ul {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .btn-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* MAIN / HERO */
+  main {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    padding: 48px 16px;
+  }
+
+  .content-lessons {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  /* OUR CLIENTS */
+  .logo-clients {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  /* MANAGE SYSTEM */
+  .cards-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* PIXELGRADE */
+  .pixelgrade {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pixelgrade-content {
+    width: 100%;
+  }
+
+  /* HELPING LOCAL */
+  .helping-local {
+    flex-direction: column;
+    gap: 48px;
+    padding: 48px 16px;
+  }
+
+  .helping-statistic {
+    grid-template-columns: 1fr;
+  }
+
+  /* HOW DESIGN */
+  .how-design {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .how-design p,
+  .how-design h2 {
+    width: 100%;
+  }
+
+  /* CUSTOMER */
+  .customer {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .customer-container {
+    flex-direction: column;
+  }
+
+  /* CARING MARKETING */
+  .caring-marketing-container {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .caring-cards-content {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* PELLENTESQUE */
+  .pellentesque h2 {
+    width: 100%;
+    font-size: 36px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* HEADER */
+  header {
+    padding: 24px;
+  }
+
+  .nav-header ul {
+    gap: 24px;
+  }
+
+  /* MAIN */
+  main {
+    flex-direction: column;
+    gap: 48px;
+    padding: 64px 32px;
+    text-align: center;
+  }
+
+  .content-lessons {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  /* MANAGE SYSTEM */
+  .cards-container {
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  /* PIXELGRADE */
+  .pixelgrade {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  /* HELPING LOCAL */
+  .helping-local {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .helping-statistic {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CUSTOMER */
+  .customer {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* =================================================
+   KEYBOARD ACCESSIBILITY
+   ================================================= */
+
+/* Visible focus for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* Remove focus outline only when not using keyboard */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* =====================
+   BREATHING ANIMATION 
+   =====================*/
+
+/* Breathing / pulse animation */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Apply breathing animation ONLY to buttons */
+.btn-login,
+.btn-primary,
+.stay-button {
+  animation: breathing 3s ease-in-out infinite;
+}
+
+/* Pause animation on hover or keyboard focus */
+.btn-login:hover,
+.btn-login:focus-visible,
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.stay-button:hover,
+.stay-button:focus-visible {
+  animation-play-state: paused;
+}
+
+/* Ensure navigation links NEVER animate */
+.nav-header ul a {
+  animation: none;
+  transform: none;
+}

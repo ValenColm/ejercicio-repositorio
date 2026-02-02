@@ -27,6 +27,5 @@ fahrenheit = (celsius * 9/5) + 32
 print = (f"{celsius} equivale a fahrenheit {fahrenheit} grados")
 
 
-#ejrcicio 5
-
-
+#ejercicio 5
+#5-Tipo de dato: usar type() para mostrar el tipo de variables usadas anteriormente.

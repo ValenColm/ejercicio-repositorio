@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como tildes y la ñ -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño se adapte a diferentes tamaños de pantalla -->
+
+    <title>clima</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="diseño.css">
+    <!-- Enlaza el archivo CSS donde están los estilos -->
+
+    <script src="script.js" type="module"></script>
+    <!-- Carga el archivo JavaScript como módulo -->
+</head>
+
+<body>
+    <!-- Cuerpo del documento, todo lo visible para el usuario -->
+
+    <header class="header">
+        <!-- Encabezado principal de la página -->
+        <h1 class="text1">consultor del clima</h1>
+        <!-- Título principal del sitio -->
+    </header>
+
+    <section class="section1">
+        <!-- Sección donde el usuario escribe la ciudad -->
+
+        <input id="celda" name="city" placeholder="Escribe la ciudad" aria-label="Buscar ciudad">
+        <!-- Campo de texto para ingresar la ciudad -->
+        <!-- aria-label mejora la accesibilidad -->
+
+        <button id="submit" aria-label="Buscar clima">consultar</button>
+        <!-- Botón que ejecuta la consulta del clima -->
+        <!-- Se puede activar con teclado (Enter o Space) -->
+    </section>
+
+    <section class="section2">
+        <!-- Sección donde se muestran los resultados -->
+
+        <ul id="cities" class="cards">
+            <!-- Lista donde se mostrarán las ciudades -->
+
+            <li class="empty">Selecciona una ciudad</li>
+            <!-- Mensaje inicial cuando no hay ciudades seleccionadas -->
+        </ul>
+
+        <div id="result" class="weather-card empty">
+            <!-- Contenedor donde se mostrará el resultado del clima -->
+            Resultado
+        </div>
+    </section>
+
+    <footer class="footer">
+        <!-- Pie de página -->
+
+        <p>© 2026 · Creado con cariño por Valentina </p>
+        <!-- Texto de derechos / autoría -->
+    </footer>
+
+</body>
+</html>
+
+

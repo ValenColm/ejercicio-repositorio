@@ -1,0 +1,50 @@
+<section id="admin-view">
+  <h2>Panel de Administración</h2>
+
+  <!-- CRUD MENÚ -->
+  <section id="menu-admin">
+    <h3>Gestión del Menú</h3>
+
+    <form id="menu-form">
+      <input
+        type="text"
+        id="menu-name"
+        placeholder="Nombre del plato"
+        required
+      />
+
+      <input
+        type="number"
+        id="menu-price"
+        placeholder="Precio"
+        required
+      />
+
+      <input type="text"
+      id="menu-category" 
+      placeholder="Categoría" 
+      required />
+
+      <button type="submit">Guardar</button>
+    </form>
+
+    <ul id="menu-list"></ul>
+  </section>
+
+  <!-- PEDIDOS -->
+  <section id="orders-admin">
+    <h3>Pedidos</h3>
+
+    <select id="status-filter">
+      <option value="all">Todos</option>
+      <option value="pendiente">Pendiente</option>
+      <option value="preparando">Preparando</option>
+      <option value="listo">Listo</option>
+      <option value="entregado">Entregado</option>
+    </select>
+
+    <div id="admin-orders"></div>
+  </section>
+
+  <button id="logout-admin">Cerrar sesión</button>
+</section>

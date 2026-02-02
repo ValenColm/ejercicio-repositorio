@@ -1,6 +1,22 @@
+:root {
+  --font-main: "poppins", Arial, sans-serif;
+  --color-bg: #f4f0ff;
+  --color-text: #333;
+  --color-card: white;
+  --color-primary: #7aa8ff;
+  --color-secondary: #7ec8e3;
+  --radius-sm: 12px;
+  --radius-md: 15px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 4px 15px rgba(0,0,0,0.1);
+  --shadow-strong: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+
 /* --- Estilos generales del cuerpo de la página --- */
 body {
-    font-family: "poppins", Arial,sans-serif; /* Tipo de letra */
+    font-family: "Raleway", Arial,sans-serif; /* Tipo de letra */
     background: #f4f0ff; /* Color de fondo claro */
     color: #333;
     margin: 20px;
@@ -250,5 +266,110 @@ a:hover {
 }
 
 
+/* --- Reglas agrupadas (optimización) --- */
+
+.boton,
+a,
+.formulario button {
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta,
+article,
+.lista_proyectos li {
+  background: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-md);
+}
+
+/* ===================== */
+/* BOTONES DE JAVASCRIPT */
+/* ===================== */
+
+button {
+    background: linear-gradient(to right, #7aa8ff, #7ec8e3);
+    border: none;
+    padding: 14px 22px;
+    border-radius: 14px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px auto;
+    display: block;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.98);
+}
 
 
+/* MEDIA QUERIES */
+
+/* MÓVILES - pantallas pequeñas */
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .lista_proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  article img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/*TABLETS  */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .lista_proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ESCRITORIO  */
+@media (min-width: 901px) {
+
+  .lista_proyectos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
